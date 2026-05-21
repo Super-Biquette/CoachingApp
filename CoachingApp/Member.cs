@@ -25,5 +25,10 @@ namespace CoachingApp
         {
             TrainingSessions = new List<TrainingSession>();
         }
+
+        public override string ToString()
+        {
+            return $"{Surname}, {FirstName} - {ContactNumber}";
+        }
     }
 }

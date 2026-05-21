@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="lstMembers" SelectionChanged="ListBox_SelectionChanged" Margin="10,53,538,10"/>
+        <ListBox x:Name="lstMembers" SelectionChanged="lstMembers_SelectionChanged" Margin="10,53,538,10"/>
         <TextBlock HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="252"><Run Language="en-gb" Text="Members"/></TextBlock>
         <StackPanel Margin="276,10,10,14">
             <TextBlock Text="Member Details"
@@ -34,7 +34,7 @@
             <Separator Margin="0,20"/>
             <WrapPanel>
                 <TextBlock TextWrapping="Wrap" Text="Training Sessions" FontSize="20" FontWeight="Bold" />
-                <Button Content="Add Session" Margin="10" Width="100" Height="30" Click="BtnAddPatient_Click"/>
+                <Button Content="Add Session" Margin="10" Width="100" Height="30" Click="AddSession_Click"/>
             </WrapPanel>
 
             <WrapPanel>

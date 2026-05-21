@@ -21,6 +21,9 @@ namespace CoachingApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        //DBContext is not working for me, I have written the code as if it was working so I'm kinda writing every line of code blindly, hoping this is good
+        // but most of it should be working
+
         private ClubData db = new ClubData();
         public MainWindow()
         {
@@ -36,7 +39,7 @@ namespace CoachingApp
                 .ThenBy(p => p.FirstName)
                 .ToList();
         }
-
+        /*
         private void SeedData()
         {
             Member member1 = new Member
@@ -123,7 +126,7 @@ namespace CoachingApp
                 CoachNotes = "Strong performance throughout. Led by example in the second half.",
                 MemberId = member3.MemberId
             };
-        }
+        }*/
 
         private void lstMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -155,6 +158,11 @@ namespace CoachingApp
             {
                 lstTrainingSessions.ItemsSource = trainingsessions;
             }
+        }
+
+        private void AddSession_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
