@@ -3,10 +3,45 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:CoachingApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListBox x:Name="lstMembers" SelectionChanged="ListBox_SelectionChanged" Margin="10,53,538,10"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="252"><Run Language="en-gb" Text="Members"/></TextBlock>
+        <StackPanel Margin="276,10,10,14">
+            <TextBlock Text="Member Details"
+           FontSize="20"
+           FontWeight="Bold"
+           Margin="0,0,0,20"/>
+
+            <WrapPanel Height="61">
+
+                <Label Content="ID: 1" Width="155"/>
+
+                <Label Content="First Name: Niamh" Width="160"/>
+                <Label Content="Last Name: Kelly" Width="180"/>
+
+                <Label Content="Contact Number: 087 333 4455" Width="170"/>
+
+                <Label Content="Membership Type: Senior" Width="170"/>
+
+                <Label Content="DOB: 14/03/1998" Width="170"/>
+
+            </WrapPanel>
+
+            <Separator Margin="0,20"/>
+            <WrapPanel>
+                <TextBlock TextWrapping="Wrap" Text="Training Sessions" FontSize="20" FontWeight="Bold" />
+                <Button Content="Add Session" Margin="10" Width="100" Height="30" Click="BtnAddPatient_Click"/>
+            </WrapPanel>
+
+            <WrapPanel>
+                <ListBox x:Name="lstTrainingSessions" Height="213" d:ItemsSource="{d:SampleData ItemCount=5}" Width="514"/>
+            </WrapPanel>
+            
+        </StackPanel>
+
     </Grid>
 </Window>
